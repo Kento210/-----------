@@ -1,0 +1,84 @@
+/* 基本スタイルの変更 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1em; /* 文字サイズの増加 */
+}
+
+h1 {
+    font-size: 3em; /* タイトルの文字サイズを大きく */
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+/* ランキングリストのスタイルの変更 */
+#ranking {
+    display: inline-block;
+    width: 90%; /* 表示幅の拡大 */
+    max-width: 800px; /* 最大幅の拡大 */
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.2em; /* パディングの増加 */
+}
+
+#ranking div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px; /* パディングの増加 */
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#ranking div:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.03); /* 変形の増加 */
+}
+
+#ranking div:last-child {
+    border-bottom: none;
+}
+
+/* ランキング順位のスタイルの変更 */
+.rank {
+    font-size: 1.8em; /* 順位の文字サイズを大きく */
+    width: 60px; /* 幅の拡大 */
+    text-align: center;
+}
+
+/* ニックネームと点数のスタイルの変更 */
+.name, .score {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1.3em; /* 文字サイズの増加 */
+}
+
+.score {
+    text-align: right;
+}
+
+/* 1位、2位、3位の背景色 */
+#ranking div:first-child { background-color: #e8f5e9; }
+#ranking div:nth-child(2) { background-color: #fffde7; }
+#ranking div:nth-child(3) { background-color: #ffebee; }
+
+/* ホバー時の背景色の変更 */
+#ranking div:first-child:hover { background-color: #c8e6c9; }
+#ranking div:nth-child(2):hover { background-color: #fff59d; }
+#ranking div:nth-child(3):hover { background-color: #ffcdd2; }
+
+/* レスポンシブデザインの変更 */
+@media (max-width: 600px) {
+    #ranking {
+        width: 100%;
+    }
+
+    .name, .score {
+        font-size: 1.1em; /* スマホ表示時の文字サイズを調整 */
+    }
+}
