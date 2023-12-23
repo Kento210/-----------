@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.text())
         .then(text => {
             const data = parseCSV(text);
-            data.sort((a, b) => b.score - a.score); // 点数が多い順にソート
+            data.sort((a, b) => a.score - b.score); // 点数が低い順にソート
             displayRanking(data);
         })
         .catch(error => console.error('エラー:', error));
